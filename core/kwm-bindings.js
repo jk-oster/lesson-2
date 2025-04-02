@@ -11,5 +11,5 @@
  * @example 'new KWM_Bindings({lastName: new Observable('Osterberger')}' in template <input kwm-bind-value="lastName" />
  * binds the HtmlElement Attribute 'value' to the observable
  *
- * @author You - 2024
+ * @author You - 2025
  */
