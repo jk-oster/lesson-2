@@ -4,6 +4,7 @@
     position: relative;
     width: 100%;
     height: 512px; /* Adjust height as needed */
+    border-radius: 8px; /* slightly rounded corners */
     background-size: cover;
     background-position: center;
     display: flex;
