@@ -14,4 +14,5 @@
 export { html, esc } from "./html.js";
 export { Component } from "./component.js";
 export { Router } from "./router.js";
-export { observable } from "./observable.js";
+export { observable, untrack, effect } from "./observable.js";
+export { on } from "./directives/on.js";
