@@ -1,6 +1,6 @@
 import {Component, html, observable, on} from "../kwm-js";
 
-class BlogComponent extends Component {
+export class BlogComponent extends Component {
 
     render() {
 

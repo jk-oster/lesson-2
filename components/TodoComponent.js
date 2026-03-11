@@ -1,6 +1,6 @@
 import {Component, html, observable} from "../kwm-js";
 
-class TodoComponent extends Component {
+export class TodoComponent extends Component {
     todos = observable([
         { id: 1, text: "Learn KWM-JS", done: true },
         { id: 2, text: "Build something cool", done: false },
