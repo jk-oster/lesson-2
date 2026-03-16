@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * KWM-JS: micro framework

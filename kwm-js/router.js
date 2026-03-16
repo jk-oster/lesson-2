@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * @typedef {Object} Route
@@ -13,36 +13,36 @@
  * Matches routes by exact string only - no parameters.
  */
 export class Router {
-    #container;
-    #routes;
+  #container;
+  #routes;
 
-    constructor(container, routes) {
-        this.#container = container;
-        this.#routes = routes;
+  constructor(container, routes) {
+    this.#container = container;
+    this.#routes = routes;
 
-        this.changeView();
+    this.changeView();
 
-        window.addEventListener('hashchange', () => {
-            this.changeView();
-        });
+    window.addEventListener("hashchange", () => {
+      this.changeView();
+    });
+  }
+
+  changeView() {
+    const currentHash = window.location.hash; // '#/about'
+    const currentPath = currentHash.slice(1) || "/"; // '/about'
+
+    for (const route of this.#routes) {
+      if (route.path === currentPath) {
+        this.#container.innerHTML = ""; // Clear previous content
+        route.component.mount(this.#container);
+        return;
+      }
     }
 
-    changeView() {
-        const currentHash = window.location.hash; // '#/about'
-        const currentPath = currentHash.slice(1) || '/'; // '/about'
+    this.#container.innerHTML = `<p>404 Not Found: ${currentPath}</p>`;
+  }
 
-        for (const route of this.#routes) {
-            if (route.path === currentPath) {
-                this.#container.innerHTML = ''; // Clear previous content
-                route.component.mount(this.#container);
-                return;
-            }
-        }
-
-        this.#container.innerHTML = `<p>404 Not Found: ${currentPath}</p>`;
-    }
-
-    navigate(path) {
-        window.location.hash = path;
-    }
+  navigate(path) {
+    window.location.hash = path;
+  }
 }

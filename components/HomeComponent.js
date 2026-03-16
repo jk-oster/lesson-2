@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-import {Component, html} from '../kwm-js';
+import { Component, html } from "../kwm-js";
 
 /**
  * This is the page home component and will be rendered when the user navigates to the '/' home route.
@@ -8,12 +8,12 @@ import {Component, html} from '../kwm-js';
  * You need to create the base class 'Component' first before using me!
  **/
 export class HomeComponent extends Component {
-    // Any component data goes here in the constructor
-    text = 'Welcome HOME 🥳';
+  // Any component data goes here in the constructor
+  text = "Welcome HOME 🥳";
 
-    // render function -> defines shape of the component
-    render() {
-        return html`
+  // render function -> defines shape of the component
+  render() {
+    return html`
         <section id="main_content">
             <h1>🏠 ${this.text}</h1>
             <p>Congratulations! You have successfully created your first component and rendered it.</p>
@@ -30,9 +30,9 @@ export class HomeComponent extends Component {
             </div>
         </section>
         `;
-    }
+  }
 }
 
 // usage in HTML like: <home-component></home-component>
 // usage in JS like: const homeComponent = new HomeComponent();
-customElements.define('home-component', HomeComponent);
+customElements.define("home-component", HomeComponent);

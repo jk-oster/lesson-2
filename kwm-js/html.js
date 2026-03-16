@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * HTML template literal for KWM-JS.

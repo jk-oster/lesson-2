@@ -1,4 +1,1 @@
-
-export class TodoModel {
-
-}
+export class TodoModel {}
