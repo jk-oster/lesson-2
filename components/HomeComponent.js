@@ -9,7 +9,7 @@ import { Component, html } from "../kwm-js";
  **/
 export class HomeComponent extends Component {
   // Any component data goes here in the constructor
-  text = "Welcome HOME 🥳";
+  text = "Welcome to KWM 🥳";
 
   // render function -> defines shape of the component
   render() {
